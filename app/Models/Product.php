@@ -18,7 +18,7 @@ class Product
   public function getAll(): array
   {
     $stmt = $this->db->query("SELECT * FROM products ORDER BY id DESC");
-    return $stmt->fetchAll();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public function getById(int $id): ?array

@@ -2,7 +2,8 @@
 
 <h1 class="mb-4">Lista de Productos</h1>
 
-<a href="/products/create" class="btn btn-success mb-3">Agregar Nuevo Producto</a>
+<a href="/products/create" class="btn btn-success mb-3">Agregar</a>
+<a href="/products/search" class="btn btn-success mb-3">Buscador</a>
 
 <div class="table-responsive">
   <table class="table table-striped table-hover">

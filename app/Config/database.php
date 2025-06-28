@@ -1,5 +1,9 @@
 <?php
-// app/Config/database.php
+
+// ****************************************
+//Ya no se utilizará por el archivo .env
+// ****************************************
+
 
 return [
     'host' => 'localhost',

@@ -8,7 +8,7 @@
   </div>
 <?php endif; ?>
 
-<form action="/products/store" method="POST">
+<form action="/products/store" method="POST" autocomplete="off" id="form-products">
   <div class="mb-3">
     <label for="name" class="form-label">Nombre del Producto</label>
     <input type="text" class="form-control" id="name" name="name" required>
@@ -24,5 +24,26 @@
   <button type="submit" class="btn btn-primary">Guardar Producto</button>
   <a href="/products" class="btn btn-secondary ms-2">Cancelar</a>
 </form>
+
+<div>
+  <?php
+  echo "<pre>";
+  var_dump($marcas);
+  echo "</pre>";
+  ?>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("#form-products")
+    form.addEventListener("submit", (event) => {
+      event.preventDefault()
+
+      if (confirm("¿Registramos un nuevo producto?")){
+        form.submit()
+      }
+    })
+  })
+</script>
 
 <?php include __DIR__ . '/../layout/footer.php'; ?>

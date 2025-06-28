@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 use App\Models\Product;
+use App\Models\Marca;
 
 class ProductController extends Controller
 {
@@ -21,9 +22,17 @@ class ProductController extends Controller
     $this->view('products.index', ['products' => $products]);
   }
 
+  public function search(): void
+  {
+    $this->view('products.search');
+  }
+
   public function create(): void
   {
-    $this->view('products.create');
+    $marcaModel = new Marca();
+    $marcas = $marcaModel->getAll();
+
+    $this->view('products.create', ['marcas' => $marcas]);
   }
 
   public function store(): void
@@ -92,5 +101,18 @@ class ProductController extends Controller
       http_response_code(405);
       $this->view('errors.405'); // Podrías crear una vista para el error 405
     }
+  }
+
+  public function searchById(int $id): void{
+    header('Content-Type: application/json');
+    $product = $this->productModel->getById($id);
+
+    if ($product){
+      echo json_encode(['success' => true, 'product' => $product]);
+    }else{
+      http_response_code(404);
+      echo json_encode(['success' => false, 'message' => 'Producto no encontrado']);
+    }
+    exit();
   }
 }
