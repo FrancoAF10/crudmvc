@@ -15,6 +15,9 @@ class ProductController extends Controller
     $this->productModel = new Product();
   }
 
+ 
+  //Es cuando ingresamos a la raíz de un determinado módulo
+
   public function index(): void
   {
     $products = $this->productModel->getAll();
@@ -23,6 +26,7 @@ class ProductController extends Controller
 
   public function search(): void
   {
+    //VISTA
     $this->view('products.search');
   }
 
