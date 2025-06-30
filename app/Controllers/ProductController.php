@@ -5,7 +5,6 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 use App\Models\Product;
-use App\Models\Marca;
 
 class ProductController extends Controller
 {
@@ -29,10 +28,10 @@ class ProductController extends Controller
 
   public function create(): void
   {
-    $marcaModel = new Marca();
-    $marcas = $marcaModel->getAll();
+    //$marcaModel = new Marca();
+    //$marcas = $marcaModel->getAll();
 
-    $this->view('products.create', ['marcas' => $marcas]);
+    $this->view('products.create');
   }
 
   public function store(): void

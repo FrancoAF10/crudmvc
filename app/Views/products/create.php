@@ -25,14 +25,6 @@
   <a href="/products" class="btn btn-secondary ms-2">Cancelar</a>
 </form>
 
-<div>
-  <?php
-  echo "<pre>";
-  var_dump($marcas);
-  echo "</pre>";
-  ?>
-</div>
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("#form-products")
