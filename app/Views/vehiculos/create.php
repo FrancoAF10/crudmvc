@@ -21,14 +21,14 @@
     <label for="precio" class="form-label">Precio</label>
     <input type="number" step="0.01" class="form-control" id="precio" name="precio" required>
   </div>
-    <div class="mb-3">
-    <label for="color" class="form-label">Modelo</label>
-    <select name="color" id="color">
-        <option value="">Seleccione opcion</option>
-        <option value="blanco">blanco</option>
-        <option value="negro">negro</option>
-        <option value="azul">azul</option>
-    </select>
+    <div class="form-floating">
+        <select name="color" id="color" class="form-select" >
+            <option value="">Seleccione opcion</option>
+            <option value="blanco">blanco</option>
+            <option value="negro">negro</option>
+            <option value="azul">azul</option>
+        </select>
+        <label for="color" class="form-label">Color</label>
   </div>
   <button type="submit" class="btn btn-primary">Guardar Vehiculo</button>
   <a href="/vehiculos" class="btn btn-secondary ms-2">Cancelar</a>

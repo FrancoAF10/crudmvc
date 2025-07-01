@@ -25,10 +25,14 @@
       <input type="number" step="0.01" class="form-control" id="precio" name="precio"
         value="<?= htmlspecialchars($vehiculo['precio']) ?>" required>
     </div>
-    <div class="mb-3">
-      <label for="color" class="form-label">Color</label>
-      <input type="text" class="form-control" id="color" name="color"
-        value="<?= htmlspecialchars($vehiculo['color']) ?>" required>
+    <div class="form-floating mb-3">
+        <select name="color" id="color" class="form-select" required>
+            <option value="">Seleccione color</option>
+            <option value="blanco" <?= $vehiculo['color'] === 'blanco' ? 'selected' : '' ?>>blanco</option>
+            <option value="negro" <?= $vehiculo['color'] === 'negro' ?  'selected' : ''  ?>>negro</option>
+            <option value="azul" <?= $vehiculo['color'] === 'azul' ? 'selected' : ''  ?>>azul</option>
+        </select>
+        <label for="color" class="form-label">Color</label>
     </div>
     <button type="submit" class="btn btn-primary">Actualizar Vehiculos</button>
     <a href="/vehiculos" class="btn btn-secondary ms-2">Cancelar</a>
