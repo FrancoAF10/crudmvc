@@ -36,9 +36,11 @@ $router->add('POST', '/vehiculos/store', 'VehiculoController', 'store');
 $router->add('GET', '/vehiculos/edit/{id}', 'VehiculoController', 'edit'); // {id} para capturar el ID
 $router->add('POST', '/vehiculos/update/{id}', 'VehiculoController', 'update');
 $router->add('POST', '/vehiculos/delete/{id}', 'VehiculoController', 'delete');
+$router->add('GET', '/vehiculos/search', 'VehiculoController', 'search');
 
 // Nueva ruta - endpoint para búsqueda con AJAX
 $router->add('GET', '/api/products/{id}', 'ProductController', 'searchById');
+$router->add('GET', '/api/vehiculos/{id}', 'VehiculoController', 'searchById');
 
 
 // Un controlador básico para la página de inicio
