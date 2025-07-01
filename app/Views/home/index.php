@@ -6,6 +6,8 @@
     <hr class="my-4">
     <p>Explora las funcionalidades de la aplicación.</p>
     <a class="btn btn-primary btn-lg" href="/products" role="button">Ver Productos</a>
+    <a class="btn btn-primary btn-lg" href="/vehiculos" role="button">Ver Productos</a>
+
 </div>
 
 <?php include __DIR__ . '/../layout/footer.php'; ?>
